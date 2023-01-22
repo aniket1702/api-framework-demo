@@ -28,3 +28,15 @@ jobs:
             - name: Run tests
               run: |
                   mvn test
+            - name: Check for X11
+              run: if [ -z "$DISPLAY" ]; then echo "X11 not found"; exit 0; fi
+              continue-on-error: true
+
+    deploy:
+        runs-on: ubuntu-latest
+        needs: build
+        if: success()
+        steps:
+            - name: Deploy to production
+              run: |
+                  # commands to deploy the jar file to production here
