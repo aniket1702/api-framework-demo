@@ -25,6 +25,11 @@ jobs:
             - name: Build the project
               run: |
                   mvn clean compile
+            - name: Install Node.js
+              run: sudo apt-get install -y nodejs
+
+            - name: Install json-server
+              run: npm install -g json-server
 
             - name: Changing directory to run db
               run: cd src/test/resources
