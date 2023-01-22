@@ -1,0 +1,1196 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>STUDENT API</title>
+<link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link rel="shortcut icon" href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png">
+<link href="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/css/spark-style.css" rel="stylesheet" />
+<link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<script src="https://cdn.rawgit.com/extent-framework/extent-github-cdn/7cc78ce/spark/js/jsontree.js"></script>
+<style type="text/css"></style></head><body class="spa -report standard">
+  <div class="app">
+    <div class="layout">
+<div class="header navbar">
+<div class="vheader">
+<div class="nav-logo">
+<a href="#">
+<div class="logo" style="background-image: url('https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@b00a2d0486596e73dd7326beacf352c639623a0e/commons/img/logo.png')"></div>
+</a>
+</div>
+<ul class="nav-left">
+<li class="search-box">
+<a class="search-toggle" href="#">
+<i class="search-icon fa fa-search"></i>
+<i class="search-icon-close fa fa-close"></i>
+</a>
+</li>
+<li class="search-input"><input id="search-tests" class="form-control" type="text" placeholder="Search..."></li>
+</ul>
+<ul class="nav-right">
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">STUDENT API</span></a>
+</li>
+<li class="m-r-10">
+<a href="#"><span class="badge badge-primary">Jan 22, 2023 12:48:45 pm</span></a>
+</li>
+</ul>
+</div>
+</div><div class="side-nav">
+<div class="side-nav-inner">
+<ul class="side-nav-menu">
+<li class="nav-item dropdown" onclick="toggleView('dashboard-view')">
+<a id="nav-dashboard" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-bar-chart"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('test-view')">
+<a id="nav-test" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-list"></i></span>
+</a>
+</li>
+<li class="nav-item dropdown" onclick="toggleView('author-view')">
+<a id="nav-author" class="dropdown-toggle" href="#">
+<span class="ico"><i class="fa fa-user"></i></span>
+</a>
+</li>
+</ul>
+</div>
+</div>      <div class="vcontainer">
+        <div class="main-content">
+<div class="container-fluid p-4 view dashboard-view">
+<div class="row">
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Started</p>
+<h3>Jan 22, 2023 12:48:45 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0">Ended</p>
+<h3>Jan 22, 2023 12:48:48 pm</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-pass">Tests Passed</p>
+<h3>2</h3>
+</div></div>
+</div>
+<div class="col-md-3">
+<div class="card"><div class="card-body">
+<p class="m-b-0 text-fail">Tests Failed</p>
+<h3>1</h3>
+</div></div>
+</div>
+</div>
+<div class="row">
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Tests</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='parent-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='66%'>
+<b>2</b> tests passed
+</small>
+</div>
+<div>
+<small data-tooltip='33%'><b>1</b> tests failed,
+<b>0</b> skipped, <b data-tooltip='0%'>0</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="card">
+<div class="card-header">
+<h6 class="card-title">Log events</h6>
+</div>
+<div class="card-body">
+<div class="">
+<canvas id='events-analysis' width='115' height='90'></canvas>
+</div>
+</div>
+<div class="card-footer">
+<div><small data-tooltip='47%'><b>9</b> events passed</small></div>
+<div>
+<small data-tooltip='5%'><b>1</b> events failed,
+<b data-tooltip='%'>9</b> others
+</small>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="row"><div class="col-md-12">
+<div class="card"><div class="card-header"><p>Timeline</p></div>
+<div class="card-body pt-0"><div>
+<canvas id="timeline" height="120"></canvas>
+</div></div>
+</div>
+</div></div>
+<script>
+var timeline = {
+"Get All student details":2.556,"Get Single student details":0.121,"Delete Student Details":0.069
+};
+</script>
+<div class="row">
+<div class="col-lg-6 col-md-12 author-container">
+<div class="card">
+<div class="card-header"><p>Author</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Passed</th><th>Failed</th><th>Skipped</th><th>Others</th><th>Passed %</th></tr></thead>
+<tbody>
+<tr>
+<td>anike_opzbqiu</td>
+<td>2</td>
+<td>1</td>
+<td>0</td>
+<td>0</td>
+<td>66.667%</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+<div class="col-lg-6 col-md-12 sysenv-container">
+<div class="card">
+<div class="card-header"><p>System/Environment</p></div>
+<div class="card-body pb-0 pt-0"><table class="table table-sm table-bordered">
+<thead><tr class="bg-gray"><th>Name</th><th>Value</th></tr></thead>
+<tbody>
+<tr>
+<td>OS</td>
+<td>Windows 11</td>
+</tr>
+<tr>
+<td>OS Architecture</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>Java Version</td>
+<td>18.0.2</td>
+</tr>
+<tr>
+<td>Java Home</td>
+<td>C:\Users\anike_opzbqiu\.jdks\openjdk-18.0.2</td>
+</tr>
+<tr>
+<td>Username</td>
+<td>anike_opzbqiu</td>
+</tr>
+<tr>
+<td>User Directory</td>
+<td>D:\Projects\API_Test_Framework\APITesting</td>
+</tr>
+<tr>
+<td>Environment</td>
+<td>QA</td>
+</tr>
+</tbody>
+</table></div>
+</div>
+</div>
+</div>
+</div>
+<script>
+var statusGroup = {
+parentCount: 5,
+passParent: 2,
+failParent: 1,
+warningParent: 0,
+skipParent: 0,
+childCount: 5,
+passChild: 0,
+failChild: 0,
+warningChild: 0,
+skipChild: 0,
+infoChild: 0,
+grandChildCount: 5,
+passGrandChild: 0,
+failGrandChild: 0,
+warningGrandChild: 0,
+skipGrandChild: 0,
+infoGrandChild: 0,
+eventsCount: 5,
+passEvents: 9,
+failEvents: 1,
+warningEvents: 0,
+skipEvents: 0,
+infoEvents: 9
+};
+</script><div class="test-wrapper row view test-view">
+  <div class="test-list">
+    <div class="test-list-tools">
+<ul class="tools pull-left">
+<li><a href="#"><span class="font-size-14">Tests</span></a></li>
+</ul>
+<ul class="tools text-right">
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
+<ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
+<div class="dropdown-divider"></div>
+<a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
+</ul>
+</li>
+<li class="dropdown">
+<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i></a>
+<ul id="author-toggle" class="dropdown-menu dropdown-md p-v-0">
+<a class="dropdown-item" href="#">anike_opzbqiu</a>
+</ul>
+</li>
+</ul>
+</div>    <div class="test-list-wrapper scrollable">
+      <ul class="test-list-item">
+        <li class="test-item"  status="pass" test-id="1"
+          author="anike_opzbqiu"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get All student details</p>
+            <p class="text-sm">
+              <span>12:48:46 pm</span> / <span>00:00:02:556</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get All student details</h5>
+<span class='badge badge-success'>01.22.2023 12:48:46 pm</span>
+<span class='badge badge-danger'>01.22.2023 12:48:48 pm</span>
+<span class='badge badge-default'>00:00:02:556</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">anike_opzbqiu</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:46 pm</td>
+        <td>
+          getStudentDetails is Started...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:47 pm</td>
+        <td>
+          <table class='markup-table table '><tr><td>X-Powered-By</td><td>Express</td></tr><tr><td>Vary</td><td>Origin, Accept-Encoding</td></tr><tr><td>Access-Control-Allow-Credentials</td><td>true</td></tr><tr><td>Cache-Control</td><td>no-cache</td></tr><tr><td>Pragma</td><td>no-cache</td></tr><tr><td>Expires</td><td>-1</td></tr><tr><td>X-Content-Type-Options</td><td>nosniff</td></tr><tr><td>Content-Type</td><td>application/json; charset=utf-8</td></tr><tr><td>ETag</td><td>W/"386f-T5CZKMxrn5kgiz+XSJQzsj4C5C0"</td></tr><tr><td>Content-Encoding</td><td>gzip</td></tr><tr><td>Date</td><td>Sun, 22 Jan 2023 07:18:47 GMT</td></tr><tr><td>Connection</td><td>keep-alive</td></tr><tr><td>Keep-Alive</td><td>timeout=5</td></tr><tr><td>Transfer-Encoding</td><td>chunked</td></tr></table>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:47 pm</td>
+        <td>
+           <div class='json-tree' id='code-block-json-0'></div>
+ <script>
+  function jsonTreeCreate0() { 
+   document.getElementById('code-block-json-0').innerHTML = JSONTree.create([
+    {
+        "id": 3,
+        "name": "Thelma Kassulke",
+        "username": "burt.runolfsson",
+        "email": "steve.little@yahoo.com",
+        "address": {
+            "street": "Hermann Street",
+            "suite": "West Shirley",
+            "city": "North Pierreville",
+            "zipcode": "28639",
+            "geo": {
+                "lat": "-4.8219424",
+                "lng": "-103.35700"
+            }
+        },
+        "phone": "(027) 531-1019 x6289",
+        "website": "pacocha.net",
+        "company": {
+            "name": "Veum-Leannon",
+            "catchPhrase": "Secured upward-trending toolset",
+            "bs": "matrix one-to-one users"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Toshia Will",
+        "username": "quinton.krajcik",
+        "email": "rickey.leannon@yahoo.com",
+        "address": {
+            "street": "Dooley Centers",
+            "suite": "New Emmitt",
+            "city": "Agustinaland",
+            "zipcode": "86125-9801",
+            "geo": {
+                "lat": "87.106665",
+                "lng": "83.445925"
+            }
+        },
+        "phone": "260-304-5606 x0363",
+        "website": "gutkowski.net",
+        "company": {
+            "name": "Wuckert LLC",
+            "catchPhrase": "Phased composite function",
+            "bs": "synergize efficient synergies"
+        }
+    },
+    {
+        "id": 5,
+        "name": "Mr. Valerie Ratke",
+        "username": "errol.hilpert",
+        "email": "geoffrey.walter@hotmail.com",
+        "address": {
+            "street": "Lehner Turnpike",
+            "suite": "Legroschester",
+            "city": "Cortneyland",
+            "zipcode": "74950",
+            "geo": {
+                "lat": "80.564947",
+                "lng": "127.28674"
+            }
+        },
+        "phone": "(940) 514-0569",
+        "website": "ward.com",
+        "company": {
+            "name": "Watsica LLC",
+            "catchPhrase": "Up-sized multimedia standardization",
+            "bs": "expedite transparent relationships"
+        }
+    },
+    {
+        "id": 6,
+        "name": "German Watsica",
+        "username": "kassandra.mayer",
+        "email": "augustine.gleichner@gmail.com",
+        "address": {
+            "street": "Pouros Manor",
+            "suite": "New Enedinashire",
+            "city": "North Joannie",
+            "zipcode": "77449",
+            "geo": {
+                "lat": "76.314957",
+                "lng": "-177.78477"
+            }
+        },
+        "phone": "(152) 938-5196 x343",
+        "website": "mckenzie.biz",
+        "company": {
+            "name": "Thiel-Runte",
+            "catchPhrase": "Virtual neutral superstructure",
+            "bs": "disintermediate holistic interfaces"
+        }
+    },
+    {
+        "id": 7,
+        "name": "Dr. Bob Krajcik",
+        "username": "percy.schulist",
+        "email": "ismael.okeefe@yahoo.com",
+        "address": {
+            "street": "Becker Loaf",
+            "suite": "Gusikowskichester",
+            "city": "Lilliamside",
+            "zipcode": "62487",
+            "geo": {
+                "lat": "5.9909662",
+                "lng": "-147.76131"
+            }
+        },
+        "phone": "122-233-2893",
+        "website": "cartwright.info",
+        "company": {
+            "name": "Harvey, Bernier and Kozey",
+            "catchPhrase": "Expanded stable project",
+            "bs": "target out-of-the-box technologies"
+        }
+    },
+    {
+        "id": 8,
+        "name": "Zachery Bogan",
+        "username": "jacinto.oconnell",
+        "email": "paulita.rau@yahoo.com",
+        "address": {
+            "street": "Becky Port",
+            "suite": "Torpport",
+            "city": "Cherrylville",
+            "zipcode": "25614",
+            "geo": {
+                "lat": "-72.622791",
+                "lng": "-148.27892"
+            }
+        },
+        "phone": "(609) 635-5749",
+        "website": "anderson.org",
+        "company": {
+            "name": "Cartwright, Becker and Herzog",
+            "catchPhrase": "User-centric global artificial intelligence",
+            "bs": "engage real-time niches"
+        }
+    },
+    {
+        "id": 9,
+        "name": "Awilda Medhurst",
+        "username": "jalisa.tromp",
+        "email": "kami.hickle@yahoo.com",
+        "address": {
+            "street": "Smitham Cliffs",
+            "suite": "South Tanna",
+            "city": "Schinnerchester",
+            "zipcode": "09826-3435",
+            "geo": {
+                "lat": "-8.4977476",
+                "lng": "-153.70952"
+            }
+        },
+        "phone": "043-425-1670 x83482",
+        "website": "tromp.name",
+        "company": {
+            "name": "Bogisich, Ryan and Rohan",
+            "catchPhrase": "Organic content-based capacity",
+            "bs": "maximize compelling markets"
+        }
+    },
+    {
+        "id": 10,
+        "name": "Gemma Greenfelder",
+        "username": "harriet.feest",
+        "email": "madie.breitenberg@hotmail.com",
+        "address": {
+            "street": "Kenton Keys",
+            "suite": "New Phung",
+            "city": "North Fosterfort",
+            "zipcode": "02051-0185",
+            "geo": {
+                "lat": "54.923271",
+                "lng": "133.79272"
+            }
+        },
+        "phone": "924-476-8550",
+        "website": "mckenzie.io",
+        "company": {
+            "name": "Upton, Considine and Kling",
+            "catchPhrase": "Synchronised bi-directional concept",
+            "bs": "benchmark B2B experiences"
+        }
+    },
+    {
+        "id": 11,
+        "name": "Jules Schaefer I",
+        "username": "sue.collier",
+        "email": "angelo.bailey@gmail.com",
+        "address": {
+            "street": "Roman Turnpike",
+            "suite": "West Alexport",
+            "city": "Lancemouth",
+            "zipcode": "44176-1642",
+            "geo": {
+                "lat": "-4.9244988",
+                "lng": "14.322490"
+            }
+        },
+        "phone": "628-813-3961",
+        "website": "hilpert.info",
+        "company": {
+            "name": "Cassin Group",
+            "catchPhrase": "Assimilated mobile circuit",
+            "bs": "morph bleeding-edge initiatives"
+        }
+    },
+    {
+        "id": 12,
+        "name": "Art Sauer",
+        "username": "amelia.toy",
+        "email": "edris.collins@gmail.com",
+        "address": {
+            "street": "Wolff Islands",
+            "suite": "Jcborough",
+            "city": "West Ferdinand",
+            "zipcode": "28622",
+            "geo": {
+                "lat": "-24.650839",
+                "lng": "-87.631811"
+            }
+        },
+        "phone": "000.699.7810 x117",
+        "website": "watsica.biz",
+        "company": {
+            "name": "Corwin Inc",
+            "catchPhrase": "Organized disintermediate database",
+            "bs": "reintermediate one-to-one paradigms"
+        }
+    },
+    {
+        "id": 13,
+        "name": "Dr. Brittanie Kessler",
+        "username": "barton.schowalter",
+        "email": "celestine.smith@hotmail.com",
+        "address": {
+            "street": "Gregory Stravenue",
+            "suite": "South Merry",
+            "city": "South Veda",
+            "zipcode": "37496-8016",
+            "geo": {
+                "lat": "-68.059886",
+                "lng": "8.7013890"
+            }
+        },
+        "phone": "1-979-226-5436",
+        "website": "kemmer.biz",
+        "company": {
+            "name": "Blick, Klocko and Koch",
+            "catchPhrase": "User-friendly 3rd generation website",
+            "bs": "synergize granular infomediaries"
+        }
+    },
+    {
+        "id": 14,
+        "name": "Dorethea Wiza",
+        "username": "jeni.reynolds",
+        "email": "petra.auer@yahoo.com",
+        "address": {
+            "street": "Walsh Roads",
+            "suite": "Hoegerview",
+            "city": "North Jimmyburgh",
+            "zipcode": "29569",
+            "geo": {
+                "lat": "-54.582290",
+                "lng": "54.146031"
+            }
+        },
+        "phone": "(763) 562-5569 x8595",
+        "website": "schneider.net",
+        "company": {
+            "name": "Walsh, Gerhold and Koepp",
+            "catchPhrase": "User-centric scalable firmware",
+            "bs": "implement efficient web services"
+        }
+    },
+    {
+        "id": 15,
+        "name": "Raymonde Kilback",
+        "username": "daniel.erdman",
+        "email": "ray.turcotte@gmail.com",
+        "address": {
+            "street": "Kling Road",
+            "suite": "West Karina",
+            "city": "Elvinaborough",
+            "zipcode": "41608-5034",
+            "geo": {
+                "lat": "-33.723814",
+                "lng": "97.176282"
+            }
+        },
+        "phone": "487-886-7020 x237",
+        "website": "bode.biz",
+        "company": {
+            "name": "Luettgen Inc",
+            "catchPhrase": "Face to face local info-mediaries",
+            "bs": "leverage impactful e-commerce"
+        }
+    },
+    {
+        "id": 16,
+        "name": "Rae Marquardt",
+        "username": "cecil.cole",
+        "email": "myong.schiller@hotmail.com",
+        "address": {
+            "street": "Wyman Harbor",
+            "suite": "West Theo",
+            "city": "Lednerchester",
+            "zipcode": "96257",
+            "geo": {
+                "lat": "30.650299",
+                "lng": "-151.66781"
+            }
+        },
+        "phone": "248-511-3091",
+        "website": "kub.com",
+        "company": {
+            "name": "Shanahan Group",
+            "catchPhrase": "Intuitive leading edge challenge",
+            "bs": "recontextualize transparent initiatives"
+        }
+    },
+    {
+        "id": 17,
+        "name": "Mr. Lane Legros",
+        "username": "odell.zemlak",
+        "email": "kecia.gibson@hotmail.com",
+        "address": {
+            "street": "Desmond Alley",
+            "suite": "Lake Cristobal",
+            "city": "Murraychester",
+            "zipcode": "68378",
+            "geo": {
+                "lat": "-32.913675",
+                "lng": "-31.755009"
+            }
+        },
+        "phone": "655-764-6693",
+        "website": "homenick.com",
+        "company": {
+            "name": "Thiel Inc",
+            "catchPhrase": "User-centric 24/7 success",
+            "bs": "transition B2C vortals"
+        }
+    },
+    {
+        "id": 18,
+        "name": "Ed Hackett",
+        "username": "donald.heller",
+        "email": "luise.lehner@hotmail.com",
+        "address": {
+            "street": "Konopelski Branch",
+            "suite": "East Lauretta",
+            "city": "West Silas",
+            "zipcode": "13204",
+            "geo": {
+                "lat": "-41.840193",
+                "lng": "-18.889021"
+            }
+        },
+        "phone": "1-705-530-7164",
+        "website": "conroy.net",
+        "company": {
+            "name": "McLaughlin, Mraz and Lehner",
+            "catchPhrase": "Mandatory well-modulated benchmark",
+            "bs": "engineer bleeding-edge e-tailers"
+        }
+    },
+    {
+        "id": 19,
+        "name": "Dr. Rodger Waelchi",
+        "username": "ward.wiza",
+        "email": "maisie.wolff@hotmail.com",
+        "address": {
+            "street": "Burt Shores",
+            "suite": "Denniston",
+            "city": "North Shad",
+            "zipcode": "63028",
+            "geo": {
+                "lat": "-61.774143",
+                "lng": "-67.962784"
+            }
+        },
+        "phone": "541.668.2009",
+        "website": "ruecker.com",
+        "company": {
+            "name": "Turner Inc",
+            "catchPhrase": "Object-based regional forecast",
+            "bs": "grow visionary bandwidth"
+        }
+    },
+    {
+        "id": 20,
+        "name": "Mrs. Savannah O'Keefe",
+        "username": "genesis.conn",
+        "email": "viviana.spencer@gmail.com",
+        "address": {
+            "street": "Williamson Bypass",
+            "suite": "Port Arlethaburgh",
+            "city": "Macstad",
+            "zipcode": "23532",
+            "geo": {
+                "lat": "17.804957",
+                "lng": "161.34287"
+            }
+        },
+        "phone": "135-590-3482 x914",
+        "website": "treutel.info",
+        "company": {
+            "name": "Kunde, Bednar and Powlowski",
+            "catchPhrase": "Devolved context-sensitive open architecture",
+            "bs": "expedite synergistic applications"
+        }
+    },
+    {
+        "id": 21,
+        "name": "Lillie Prohaska",
+        "username": "charlie.schamberger",
+        "email": "brian.moen@gmail.com",
+        "address": {
+            "street": "Lorenza Isle",
+            "suite": "New Maritashire",
+            "city": "East Delois",
+            "zipcode": "17396-5130",
+            "geo": {
+                "lat": "7.9482623",
+                "lng": "133.97508"
+            }
+        },
+        "phone": "1-424-867-9615",
+        "website": "buckridge.io",
+        "company": {
+            "name": "Schneider LLC",
+            "catchPhrase": "Profit-focused bifurcated challenge",
+            "bs": "reintermediate extensible markets"
+        }
+    },
+    {
+        "id": 22,
+        "name": "Luther Volkman",
+        "username": "adelaida.jerde",
+        "email": "andrea.lynch@hotmail.com",
+        "address": {
+            "street": "Funk Walks",
+            "suite": "West Venitaland",
+            "city": "Lake Colbyton",
+            "zipcode": "39963-3251",
+            "geo": {
+                "lat": "-3.6097021",
+                "lng": "110.19204"
+            }
+        },
+        "phone": "1-220-563-6210 x2933",
+        "website": "feest.com",
+        "company": {
+            "name": "Kris, Mosciski and Reilly",
+            "catchPhrase": "Decentralized content-based internet solution",
+            "bs": "orchestrate real-time experiences"
+        }
+    },
+    {
+        "id": 23,
+        "name": "Tristan Ryan",
+        "username": "devora.orn",
+        "email": "hal.kutch@hotmail.com",
+        "address": {
+            "street": "Koss Wall",
+            "suite": "Bernitahaven",
+            "city": "North Cedric",
+            "zipcode": "33264",
+            "geo": {
+                "lat": "-17.772434",
+                "lng": "-157.26319"
+            }
+        },
+        "phone": "1-860-307-3386 x1686",
+        "website": "rippin.net",
+        "company": {
+            "name": "Willms Inc",
+            "catchPhrase": "Adaptive incremental budgetary management",
+            "bs": "integrate sexy channels"
+        }
+    },
+    {
+        "id": 24,
+        "name": "Yu O'Keefe DDS",
+        "username": "delmer.cronin",
+        "email": "eloisa.boyer@yahoo.com",
+        "address": {
+            "street": "Thompson Freeway",
+            "suite": "New Harlanchester",
+            "city": "Buckridgemouth",
+            "zipcode": "67972",
+            "geo": {
+                "lat": "-44.255717",
+                "lng": "141.56761"
+            }
+        },
+        "phone": "100-325-4790",
+        "website": "kassulke.info",
+        "company": {
+            "name": "Hartmann, McClure and Krajcik",
+            "catchPhrase": "Synergized incremental model",
+            "bs": "maximize open-source e-tailers"
+        }
+    },
+    {
+        "id": 25,
+        "name": "Mrs. Salvatore Ortiz",
+        "username": "jaime.padberg",
+        "email": "homer.carroll@gmail.com",
+        "address": {
+            "street": "Margareta Terrace",
+            "suite": "Spencerville",
+            "city": "Port Enrique",
+            "zipcode": "72085-3141",
+            "geo": {
+                "lat": "79.688596",
+                "lng": "18.359430"
+            }
+        },
+        "phone": "1-137-740-1257 x92623",
+        "website": "daugherty.io",
+        "company": {
+            "name": "Cartwright, Lakin and Wiegand",
+            "catchPhrase": "Progressive zero tolerance array",
+            "bs": "leverage real-time infrastructures"
+        }
+    },
+    {
+        "id": 26,
+        "name": "Serena Sipes",
+        "username": "diego.altenwerth",
+        "email": "mattie.beier@gmail.com",
+        "address": {
+            "street": "West Valleys",
+            "suite": "Bergnaummouth",
+            "city": "North Abelview",
+            "zipcode": "81434",
+            "geo": {
+                "lat": "89.842383",
+                "lng": "38.967296"
+            }
+        },
+        "phone": "295-490-6611",
+        "website": "koelpin.info",
+        "company": {
+            "name": "Hyatt-Huels",
+            "catchPhrase": "Programmable analyzing secured line",
+            "bs": "innovate real-time e-commerce"
+        }
+    },
+    {
+        "id": 27,
+        "name": "Coletta Wilkinson",
+        "username": "neda.considine",
+        "email": "bernie.hermiston@gmail.com",
+        "address": {
+            "street": "Jamie Curve",
+            "suite": "Port Randeestad",
+            "city": "West Eulah",
+            "zipcode": "06524",
+            "geo": {
+                "lat": "-80.588811",
+                "lng": "136.10416"
+            }
+        },
+        "phone": "566.622.6063 x332",
+        "website": "reichel.com",
+        "company": {
+            "name": "Feest-Kassulke",
+            "catchPhrase": "Visionary analyzing framework",
+            "bs": "deliver collaborative partnerships"
+        }
+    }
+]); 
+  }
+  jsonTreeCreate0();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          Length of Json Array/Object: 25
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          <ul><li>ACTUAL STATUS CODE:200</li><li>EXPECTED STATUS CODE:200</li></ul>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          <ul><li>Hermann Street</li><li>Dooley Centers</li><li>Lehner Turnpike</li><li>Pouros Manor</li><li>Becker Loaf</li><li>Becky Port</li><li>Smitham Cliffs</li><li>Kenton Keys</li><li>Roman Turnpike</li><li>Wolff Islands</li><li>Gregory Stravenue</li><li>Walsh Roads</li><li>Kling Road</li><li>Wyman Harbor</li><li>Desmond Alley</li><li>Konopelski Branch</li><li>Burt Shores</li><li>Williamson Bypass</li><li>Lorenza Isle</li><li>Funk Walks</li><li>Koss Wall</li><li>Thompson Freeway</li><li>Margareta Terrace</li><li>West Valleys</li><li>Jamie Curve</li></ul>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          getStudentDetails is Passed...
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="2"
+          author="anike_opzbqiu"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Get Single student details</p>
+            <p class="text-sm">
+              <span>12:48:48 pm</span> / <span>00:00:00:121</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">Get Single student details</h5>
+<span class='badge badge-success'>01.22.2023 12:48:48 pm</span>
+<span class='badge badge-danger'>01.22.2023 12:48:48 pm</span>
+<span class='badge badge-default'>00:00:00:121</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">anike_opzbqiu</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          getSingleStudentDetail is Started...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          <table class='markup-table table '><tr><td>X-Powered-By</td><td>Express</td></tr><tr><td>Vary</td><td>Origin, Accept-Encoding</td></tr><tr><td>Access-Control-Allow-Credentials</td><td>true</td></tr><tr><td>Cache-Control</td><td>no-cache</td></tr><tr><td>Pragma</td><td>no-cache</td></tr><tr><td>Expires</td><td>-1</td></tr><tr><td>X-Content-Type-Options</td><td>nosniff</td></tr><tr><td>Content-Type</td><td>application/json; charset=utf-8</td></tr><tr><td>Content-Length</td><td>586</td></tr><tr><td>ETag</td><td>W/"24a-x7g8j5wd+Sk5hUaFLxjRLqlShOY"</td></tr><tr><td>Date</td><td>Sun, 22 Jan 2023 07:18:48 GMT</td></tr><tr><td>Connection</td><td>keep-alive</td></tr><tr><td>Keep-Alive</td><td>timeout=5</td></tr></table>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+           <div class='json-tree' id='code-block-json-1'></div>
+ <script>
+  function jsonTreeCreate1() { 
+   document.getElementById('code-block-json-1').innerHTML = JSONTree.create([
+  {
+    "id": 6,
+    "name": "German Watsica",
+    "username": "kassandra.mayer",
+    "email": "augustine.gleichner@gmail.com",
+    "address": {
+      "street": "Pouros Manor",
+      "suite": "New Enedinashire",
+      "city": "North Joannie",
+      "zipcode": "77449",
+      "geo": {
+        "lat": "76.314957",
+        "lng": "-177.78477"
+      }
+    },
+    "phone": "(152) 938-5196 x343",
+    "website": "mckenzie.biz",
+    "company": {
+      "name": "Thiel-Runte",
+      "catchPhrase": "Virtual neutral superstructure",
+      "bs": "disintermediate holistic interfaces"
+    }
+  }
+]); 
+  }
+  jsonTreeCreate1();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          Length of Json Array/Object: 1
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          <ul><li>ACTUAL STATUS CODE:200</li><li>EXPECTED STATUS CODE:200</li></ul>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          <ul><li>Pouros Manor</li></ul>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          getSingleStudentDetail is Passed...
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="3"
+          author="anike_opzbqiu"
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">Delete Student Details</p>
+            <p class="text-sm">
+              <span>12:48:48 pm</span> / <span>00:00:00:069</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">Delete Student Details</h5>
+<span class='badge badge-success'>01.22.2023 12:48:48 pm</span>
+<span class='badge badge-danger'>01.22.2023 12:48:48 pm</span>
+<span class='badge badge-default'>00:00:00:069</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
+<span class='badge badge-default pointer float-right ml-1 et'><i class="fa fa-chevron-down"></i></span>
+<span class='badge badge-default pointer float-right ct'><i class="fa fa-chevron-up"></i></span>
+</div>
+<div class="m-t-15"><span class="badge badge-pill badge-default">anike_opzbqiu</span></div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          deleteStudentdetails is Started...
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          <table class='markup-table table '><tr><td>X-Powered-By</td><td>Express</td></tr><tr><td>Vary</td><td>Origin, Accept-Encoding</td></tr><tr><td>Access-Control-Allow-Credentials</td><td>true</td></tr><tr><td>Cache-Control</td><td>no-cache</td></tr><tr><td>Pragma</td><td>no-cache</td></tr><tr><td>Expires</td><td>-1</td></tr><tr><td>X-Content-Type-Options</td><td>nosniff</td></tr><tr><td>Content-Type</td><td>application/json; charset=utf-8</td></tr><tr><td>Content-Length</td><td>2</td></tr><tr><td>ETag</td><td>W/"2-vyGp6PvFo4RvsFtPoIWeCReyIC8"</td></tr><tr><td>Date</td><td>Sun, 22 Jan 2023 07:18:48 GMT</td></tr><tr><td>Connection</td><td>keep-alive</td></tr><tr><td>Keep-Alive</td><td>timeout=5</td></tr></table>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+           <div class='json-tree' id='code-block-json-2'></div>
+ <script>
+  function jsonTreeCreate2() { 
+   document.getElementById('code-block-json-2').innerHTML = JSONTree.create({
+    
+}); 
+  }
+  jsonTreeCreate2();
+ </script>
+
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          expected [200] but found [404]
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>12:48:48 pm</td>
+        <td>
+          deleteStudentdetails is Passed...
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+<div class="test-content scrollable">
+<div class="test-content-tools">
+<ul><li><a class="back-to-test" href="#"><i class="fa fa-arrow-left"></i></a></li></ul>
+</div>
+<div class="test-content-detail"><div class="detail-body"></div></div>
+</div></div>
+<div class="test-wrapper row view author-view attributes-view">
+<div class="test-list">
+<div class="test-list-tools">
+<ul class="tools pull-left"><li><a href=""><span class="font-size-14">Author</span></a></li></ul>
+<ul class="tools text-right"><li><a href="#"><span class="badge badge-primary">1</span></a></li></ul>
+</div>
+<div class="test-list-wrapper scrollable">
+<ul class="test-list-item">
+<li class="test-item">
+<div class="test-detail">
+<span class="meta">
+<span class='badge log pass-bg'>2</span>
+<span class='badge log badge-danger'>1</span>
+</span>
+<p class="name">anike_opzbqiu</p>
+<p class="duration text-sm">3 tests</p>
+</div>
+<div class="test-contents d-none">
+<div class="info">
+<h4>anike_opzbqiu</h4>
+<span status="pass" class='badge log pass-bg'>2 passed</span>
+<span status="fail" class='badge log badge-danger'>1 failed</span>
+</div>
+<table class='table table-sm mt-4'>
+<thead>
+<tr>
+<th class="status-col">Status</th>
+<th class="timestamp-col">Timestamp</th>
+<th>TestName</th>
+</tr>
+</thead>
+<tbody>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:48:46 pm</td>
+<td>
+<a href="#" class="linked" test-id='1' id='1'>Get All student details</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="pass">
+<td><span class="badge log pass-bg">Pass</span></td>
+<td>12:48:48 pm</td>
+<td>
+<a href="#" class="linked" test-id='2' id='2'>Get Single student details</a>
+</td>
+</tr>
+<tr class="tag-test-status" status="fail">
+<td><span class="badge log fail-bg">Fail</span></td>
+<td>12:48:48 pm</td>
+<td>
+<a href="#" class="linked" test-id='3' id='3'>Delete Student Details</a>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="test-content scrollable">
+<div class="test-content-detail">
+<div class="detail-body"></div>
+</div>
+</div>
+</div>        </div>
+      </div>
+    </div>
+  </div>
+<script src="https://cdn.jsdelivr.net/gh/extent-framework/extent-github-cdn@d6562a79075e061305ccfdb82f01e5e195e2d307/spark/js/spark-script.js"></script>
+<script type="text/javascript">document.getElementsByClassName('card-body')[2].style.backgroundColor='#28a745';document.getElementsByClassName('card-body')[3].style.backgroundColor='#ff5722';document.getElementsByClassName('card-body')[3].children[0].classList.remove('text-fail'); document.getElementsByClassName('card-body')[2].children[0].classList.remove('text-pass'); document.getElementsByClassName('card-body')[2].children[0].style.color='#fff';document.getElementsByClassName('card-body')[3].children[0].style.color='#fff';document.getElementsByClassName('card-body')[2].children[1].style.color='#fff';document.getElementsByClassName('card-body')[3].children[1].style.color='#fff';document.getElementsByClassName('card-body')[0].children[0].style.color='#28a745';document.getElementsByClassName('card-body')[0].children[1].style.color='#28a745';document.getElementsByClassName('card')[0].style.borderColor='#28a745';document.getElementsByClassName('card-body')[1].children[0].style.color='#ff5722';document.getElementsByClassName('card-body')[1].children[1].style.color='#ff5722';document.getElementsByClassName('card')[1].style.borderColor='#ff5722'</script></body>
+</html>

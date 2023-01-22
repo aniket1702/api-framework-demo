@@ -1,0 +1,579 @@
+{
+  "student": [
+    {
+      "id": 3,
+      "name": "Thelma Kassulke",
+      "username": "burt.runolfsson",
+      "email": "steve.little@yahoo.com",
+      "address": {
+        "street": "Hermann Street",
+        "suite": "West Shirley",
+        "city": "North Pierreville",
+        "zipcode": "28639",
+        "geo": {
+          "lat": "-4.8219424",
+          "lng": "-103.35700"
+        }
+      },
+      "phone": "(027) 531-1019 x6289",
+      "website": "pacocha.net",
+      "company": {
+        "name": "Veum-Leannon",
+        "catchPhrase": "Secured upward-trending toolset",
+        "bs": "matrix one-to-one users"
+      }
+    },
+    {
+      "id": 4,
+      "name": "Toshia Will",
+      "username": "quinton.krajcik",
+      "email": "rickey.leannon@yahoo.com",
+      "address": {
+        "street": "Dooley Centers",
+        "suite": "New Emmitt",
+        "city": "Agustinaland",
+        "zipcode": "86125-9801",
+        "geo": {
+          "lat": "87.106665",
+          "lng": "83.445925"
+        }
+      },
+      "phone": "260-304-5606 x0363",
+      "website": "gutkowski.net",
+      "company": {
+        "name": "Wuckert LLC",
+        "catchPhrase": "Phased composite function",
+        "bs": "synergize efficient synergies"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Mr. Valerie Ratke",
+      "username": "errol.hilpert",
+      "email": "geoffrey.walter@hotmail.com",
+      "address": {
+        "street": "Lehner Turnpike",
+        "suite": "Legroschester",
+        "city": "Cortneyland",
+        "zipcode": "74950",
+        "geo": {
+          "lat": "80.564947",
+          "lng": "127.28674"
+        }
+      },
+      "phone": "(940) 514-0569",
+      "website": "ward.com",
+      "company": {
+        "name": "Watsica LLC",
+        "catchPhrase": "Up-sized multimedia standardization",
+        "bs": "expedite transparent relationships"
+      }
+    },
+    {
+      "id": 6,
+      "name": "German Watsica",
+      "username": "kassandra.mayer",
+      "email": "augustine.gleichner@gmail.com",
+      "address": {
+        "street": "Pouros Manor",
+        "suite": "New Enedinashire",
+        "city": "North Joannie",
+        "zipcode": "77449",
+        "geo": {
+          "lat": "76.314957",
+          "lng": "-177.78477"
+        }
+      },
+      "phone": "(152) 938-5196 x343",
+      "website": "mckenzie.biz",
+      "company": {
+        "name": "Thiel-Runte",
+        "catchPhrase": "Virtual neutral superstructure",
+        "bs": "disintermediate holistic interfaces"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Dr. Bob Krajcik",
+      "username": "percy.schulist",
+      "email": "ismael.okeefe@yahoo.com",
+      "address": {
+        "street": "Becker Loaf",
+        "suite": "Gusikowskichester",
+        "city": "Lilliamside",
+        "zipcode": "62487",
+        "geo": {
+          "lat": "5.9909662",
+          "lng": "-147.76131"
+        }
+      },
+      "phone": "122-233-2893",
+      "website": "cartwright.info",
+      "company": {
+        "name": "Harvey, Bernier and Kozey",
+        "catchPhrase": "Expanded stable project",
+        "bs": "target out-of-the-box technologies"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Zachery Bogan",
+      "username": "jacinto.oconnell",
+      "email": "paulita.rau@yahoo.com",
+      "address": {
+        "street": "Becky Port",
+        "suite": "Torpport",
+        "city": "Cherrylville",
+        "zipcode": "25614",
+        "geo": {
+          "lat": "-72.622791",
+          "lng": "-148.27892"
+        }
+      },
+      "phone": "(609) 635-5749",
+      "website": "anderson.org",
+      "company": {
+        "name": "Cartwright, Becker and Herzog",
+        "catchPhrase": "User-centric global artificial intelligence",
+        "bs": "engage real-time niches"
+      }
+    },
+    {
+      "id": 9,
+      "name": "Awilda Medhurst",
+      "username": "jalisa.tromp",
+      "email": "kami.hickle@yahoo.com",
+      "address": {
+        "street": "Smitham Cliffs",
+        "suite": "South Tanna",
+        "city": "Schinnerchester",
+        "zipcode": "09826-3435",
+        "geo": {
+          "lat": "-8.4977476",
+          "lng": "-153.70952"
+        }
+      },
+      "phone": "043-425-1670 x83482",
+      "website": "tromp.name",
+      "company": {
+        "name": "Bogisich, Ryan and Rohan",
+        "catchPhrase": "Organic content-based capacity",
+        "bs": "maximize compelling markets"
+      }
+    },
+    {
+      "id": 10,
+      "name": "Gemma Greenfelder",
+      "username": "harriet.feest",
+      "email": "madie.breitenberg@hotmail.com",
+      "address": {
+        "street": "Kenton Keys",
+        "suite": "New Phung",
+        "city": "North Fosterfort",
+        "zipcode": "02051-0185",
+        "geo": {
+          "lat": "54.923271",
+          "lng": "133.79272"
+        }
+      },
+      "phone": "924-476-8550",
+      "website": "mckenzie.io",
+      "company": {
+        "name": "Upton, Considine and Kling",
+        "catchPhrase": "Synchronised bi-directional concept",
+        "bs": "benchmark B2B experiences"
+      }
+    },
+    {
+      "id": 11,
+      "name": "Jules Schaefer I",
+      "username": "sue.collier",
+      "email": "angelo.bailey@gmail.com",
+      "address": {
+        "street": "Roman Turnpike",
+        "suite": "West Alexport",
+        "city": "Lancemouth",
+        "zipcode": "44176-1642",
+        "geo": {
+          "lat": "-4.9244988",
+          "lng": "14.322490"
+        }
+      },
+      "phone": "628-813-3961",
+      "website": "hilpert.info",
+      "company": {
+        "name": "Cassin Group",
+        "catchPhrase": "Assimilated mobile circuit",
+        "bs": "morph bleeding-edge initiatives"
+      }
+    },
+    {
+      "id": 12,
+      "name": "Art Sauer",
+      "username": "amelia.toy",
+      "email": "edris.collins@gmail.com",
+      "address": {
+        "street": "Wolff Islands",
+        "suite": "Jcborough",
+        "city": "West Ferdinand",
+        "zipcode": "28622",
+        "geo": {
+          "lat": "-24.650839",
+          "lng": "-87.631811"
+        }
+      },
+      "phone": "000.699.7810 x117",
+      "website": "watsica.biz",
+      "company": {
+        "name": "Corwin Inc",
+        "catchPhrase": "Organized disintermediate database",
+        "bs": "reintermediate one-to-one paradigms"
+      }
+    },
+    {
+      "id": 13,
+      "name": "Dr. Brittanie Kessler",
+      "username": "barton.schowalter",
+      "email": "celestine.smith@hotmail.com",
+      "address": {
+        "street": "Gregory Stravenue",
+        "suite": "South Merry",
+        "city": "South Veda",
+        "zipcode": "37496-8016",
+        "geo": {
+          "lat": "-68.059886",
+          "lng": "8.7013890"
+        }
+      },
+      "phone": "1-979-226-5436",
+      "website": "kemmer.biz",
+      "company": {
+        "name": "Blick, Klocko and Koch",
+        "catchPhrase": "User-friendly 3rd generation website",
+        "bs": "synergize granular infomediaries"
+      }
+    },
+    {
+      "id": 14,
+      "name": "Dorethea Wiza",
+      "username": "jeni.reynolds",
+      "email": "petra.auer@yahoo.com",
+      "address": {
+        "street": "Walsh Roads",
+        "suite": "Hoegerview",
+        "city": "North Jimmyburgh",
+        "zipcode": "29569",
+        "geo": {
+          "lat": "-54.582290",
+          "lng": "54.146031"
+        }
+      },
+      "phone": "(763) 562-5569 x8595",
+      "website": "schneider.net",
+      "company": {
+        "name": "Walsh, Gerhold and Koepp",
+        "catchPhrase": "User-centric scalable firmware",
+        "bs": "implement efficient web services"
+      }
+    },
+    {
+      "id": 15,
+      "name": "Raymonde Kilback",
+      "username": "daniel.erdman",
+      "email": "ray.turcotte@gmail.com",
+      "address": {
+        "street": "Kling Road",
+        "suite": "West Karina",
+        "city": "Elvinaborough",
+        "zipcode": "41608-5034",
+        "geo": {
+          "lat": "-33.723814",
+          "lng": "97.176282"
+        }
+      },
+      "phone": "487-886-7020 x237",
+      "website": "bode.biz",
+      "company": {
+        "name": "Luettgen Inc",
+        "catchPhrase": "Face to face local info-mediaries",
+        "bs": "leverage impactful e-commerce"
+      }
+    },
+    {
+      "id": 16,
+      "name": "Rae Marquardt",
+      "username": "cecil.cole",
+      "email": "myong.schiller@hotmail.com",
+      "address": {
+        "street": "Wyman Harbor",
+        "suite": "West Theo",
+        "city": "Lednerchester",
+        "zipcode": "96257",
+        "geo": {
+          "lat": "30.650299",
+          "lng": "-151.66781"
+        }
+      },
+      "phone": "248-511-3091",
+      "website": "kub.com",
+      "company": {
+        "name": "Shanahan Group",
+        "catchPhrase": "Intuitive leading edge challenge",
+        "bs": "recontextualize transparent initiatives"
+      }
+    },
+    {
+      "id": 17,
+      "name": "Mr. Lane Legros",
+      "username": "odell.zemlak",
+      "email": "kecia.gibson@hotmail.com",
+      "address": {
+        "street": "Desmond Alley",
+        "suite": "Lake Cristobal",
+        "city": "Murraychester",
+        "zipcode": "68378",
+        "geo": {
+          "lat": "-32.913675",
+          "lng": "-31.755009"
+        }
+      },
+      "phone": "655-764-6693",
+      "website": "homenick.com",
+      "company": {
+        "name": "Thiel Inc",
+        "catchPhrase": "User-centric 24/7 success",
+        "bs": "transition B2C vortals"
+      }
+    },
+    {
+      "id": 18,
+      "name": "Ed Hackett",
+      "username": "donald.heller",
+      "email": "luise.lehner@hotmail.com",
+      "address": {
+        "street": "Konopelski Branch",
+        "suite": "East Lauretta",
+        "city": "West Silas",
+        "zipcode": "13204",
+        "geo": {
+          "lat": "-41.840193",
+          "lng": "-18.889021"
+        }
+      },
+      "phone": "1-705-530-7164",
+      "website": "conroy.net",
+      "company": {
+        "name": "McLaughlin, Mraz and Lehner",
+        "catchPhrase": "Mandatory well-modulated benchmark",
+        "bs": "engineer bleeding-edge e-tailers"
+      }
+    },
+    {
+      "id": 19,
+      "name": "Dr. Rodger Waelchi",
+      "username": "ward.wiza",
+      "email": "maisie.wolff@hotmail.com",
+      "address": {
+        "street": "Burt Shores",
+        "suite": "Denniston",
+        "city": "North Shad",
+        "zipcode": "63028",
+        "geo": {
+          "lat": "-61.774143",
+          "lng": "-67.962784"
+        }
+      },
+      "phone": "541.668.2009",
+      "website": "ruecker.com",
+      "company": {
+        "name": "Turner Inc",
+        "catchPhrase": "Object-based regional forecast",
+        "bs": "grow visionary bandwidth"
+      }
+    },
+    {
+      "id": 20,
+      "name": "Mrs. Savannah O'Keefe",
+      "username": "genesis.conn",
+      "email": "viviana.spencer@gmail.com",
+      "address": {
+        "street": "Williamson Bypass",
+        "suite": "Port Arlethaburgh",
+        "city": "Macstad",
+        "zipcode": "23532",
+        "geo": {
+          "lat": "17.804957",
+          "lng": "161.34287"
+        }
+      },
+      "phone": "135-590-3482 x914",
+      "website": "treutel.info",
+      "company": {
+        "name": "Kunde, Bednar and Powlowski",
+        "catchPhrase": "Devolved context-sensitive open architecture",
+        "bs": "expedite synergistic applications"
+      }
+    },
+    {
+      "id": 21,
+      "name": "Lillie Prohaska",
+      "username": "charlie.schamberger",
+      "email": "brian.moen@gmail.com",
+      "address": {
+        "street": "Lorenza Isle",
+        "suite": "New Maritashire",
+        "city": "East Delois",
+        "zipcode": "17396-5130",
+        "geo": {
+          "lat": "7.9482623",
+          "lng": "133.97508"
+        }
+      },
+      "phone": "1-424-867-9615",
+      "website": "buckridge.io",
+      "company": {
+        "name": "Schneider LLC",
+        "catchPhrase": "Profit-focused bifurcated challenge",
+        "bs": "reintermediate extensible markets"
+      }
+    },
+    {
+      "id": 22,
+      "name": "Luther Volkman",
+      "username": "adelaida.jerde",
+      "email": "andrea.lynch@hotmail.com",
+      "address": {
+        "street": "Funk Walks",
+        "suite": "West Venitaland",
+        "city": "Lake Colbyton",
+        "zipcode": "39963-3251",
+        "geo": {
+          "lat": "-3.6097021",
+          "lng": "110.19204"
+        }
+      },
+      "phone": "1-220-563-6210 x2933",
+      "website": "feest.com",
+      "company": {
+        "name": "Kris, Mosciski and Reilly",
+        "catchPhrase": "Decentralized content-based internet solution",
+        "bs": "orchestrate real-time experiences"
+      }
+    },
+    {
+      "id": 23,
+      "name": "Tristan Ryan",
+      "username": "devora.orn",
+      "email": "hal.kutch@hotmail.com",
+      "address": {
+        "street": "Koss Wall",
+        "suite": "Bernitahaven",
+        "city": "North Cedric",
+        "zipcode": "33264",
+        "geo": {
+          "lat": "-17.772434",
+          "lng": "-157.26319"
+        }
+      },
+      "phone": "1-860-307-3386 x1686",
+      "website": "rippin.net",
+      "company": {
+        "name": "Willms Inc",
+        "catchPhrase": "Adaptive incremental budgetary management",
+        "bs": "integrate sexy channels"
+      }
+    },
+    {
+      "id": 24,
+      "name": "Yu O'Keefe DDS",
+      "username": "delmer.cronin",
+      "email": "eloisa.boyer@yahoo.com",
+      "address": {
+        "street": "Thompson Freeway",
+        "suite": "New Harlanchester",
+        "city": "Buckridgemouth",
+        "zipcode": "67972",
+        "geo": {
+          "lat": "-44.255717",
+          "lng": "141.56761"
+        }
+      },
+      "phone": "100-325-4790",
+      "website": "kassulke.info",
+      "company": {
+        "name": "Hartmann, McClure and Krajcik",
+        "catchPhrase": "Synergized incremental model",
+        "bs": "maximize open-source e-tailers"
+      }
+    },
+    {
+      "id": 25,
+      "name": "Mrs. Salvatore Ortiz",
+      "username": "jaime.padberg",
+      "email": "homer.carroll@gmail.com",
+      "address": {
+        "street": "Margareta Terrace",
+        "suite": "Spencerville",
+        "city": "Port Enrique",
+        "zipcode": "72085-3141",
+        "geo": {
+          "lat": "79.688596",
+          "lng": "18.359430"
+        }
+      },
+      "phone": "1-137-740-1257 x92623",
+      "website": "daugherty.io",
+      "company": {
+        "name": "Cartwright, Lakin and Wiegand",
+        "catchPhrase": "Progressive zero tolerance array",
+        "bs": "leverage real-time infrastructures"
+      }
+    },
+    {
+      "id": 26,
+      "name": "Serena Sipes",
+      "username": "diego.altenwerth",
+      "email": "mattie.beier@gmail.com",
+      "address": {
+        "street": "West Valleys",
+        "suite": "Bergnaummouth",
+        "city": "North Abelview",
+        "zipcode": "81434",
+        "geo": {
+          "lat": "89.842383",
+          "lng": "38.967296"
+        }
+      },
+      "phone": "295-490-6611",
+      "website": "koelpin.info",
+      "company": {
+        "name": "Hyatt-Huels",
+        "catchPhrase": "Programmable analyzing secured line",
+        "bs": "innovate real-time e-commerce"
+      }
+    },
+    {
+      "id": 27,
+      "name": "Coletta Wilkinson",
+      "username": "neda.considine",
+      "email": "bernie.hermiston@gmail.com",
+      "address": {
+        "street": "Jamie Curve",
+        "suite": "Port Randeestad",
+        "city": "West Eulah",
+        "zipcode": "06524",
+        "geo": {
+          "lat": "-80.588811",
+          "lng": "136.10416"
+        }
+      },
+      "phone": "566.622.6063 x332",
+      "website": "reichel.com",
+      "company": {
+        "name": "Feest-Kassulke",
+        "catchPhrase": "Visionary analyzing framework",
+        "bs": "deliver collaborative partnerships"
+      }
+    }
+  ]
+}

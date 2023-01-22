@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="BASIC API TESTING">
+    <listeners>
+        <listener class-name="com.apitest.listeners.Listener"/>
+    </listeners>
+    <test verbose="2" preserve-order="true" name="STUDENT API">
+        <classes>
+            <class name="com.apitest.httpmethods.get.GET_StudentDetails"/>
+            <class name="com.apitest.httpmethods.get.GET_SingleStudentDetails"/>
+            <!--<class name="com.apitest.httpmethods.post.POST_StudentDetails"/>-->
+            <class name="com.apitest.httpmethods.delete.DELETE_StudentDetails"/>
+        </classes>
+    </test>
+</suite>
