@@ -36,13 +36,14 @@ jobs:
               run: cd..
             - name: Moving to resources folder
               run: cd..
-        parallel:
-            - name: Moving to resources folder
-              run: cd src/test/resources | json-server db.json --port=8080
+            - name: Steps in parallel
+              parallel:
+                - name: Moving to resources folder
+                  run: cd src/test/resources | json-server db.json --port=8080
 
-            - name: Run tests
-              run: |
-                  mvn test
+                - name: Run tests
+                  run: |
+                      mvn test
 
     deploy:
         runs-on: ubuntu-latest
