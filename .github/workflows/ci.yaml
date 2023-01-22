@@ -4,24 +4,29 @@ on:
     push:
         branches:
             - master
-
+    workflow_dispatch:
 jobs:
     build:
         runs-on: ubuntu-latest
 
         steps:
-            - uses: actions/checkout@v2
+            - name: Pull the project into the machine
+            - uses: actions/checkout/@v2
+
             - name: Set up JDK
-              uses: actions/setup-java@v2
+              uses: actions/setup-java@v1
               with:
-                  java-version: 14
+                  java-version: 11
+
             - name: Install Maven
               run: |
                   sudo apt-get update
                   sudo apt-get install -y maven
+
             - name: Build the project
               run: |
                   mvn clean install
+
             - name: Run tests
               run: |
                   mvn test
