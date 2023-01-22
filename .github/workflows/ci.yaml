@@ -25,16 +25,18 @@ jobs:
             - name: Build the project
               run: |
                   mvn clean compile
+
             - name: Install Node.js
               run: sudo apt-get install -y nodejs
 
             - name: Install json-server
               run: npm install -g json-server
 
-            - name: Changing directory to run db
-              run: cd src/test/resources
-                  - name: Running DB
-                    run: json-server db.json --port=8080
+            - name: Moving to resources folder
+              run: cd src/test/resources | json-server db.json --port=8080
+
+#            - name: Run Json Server
+#              run:
 
             - name: Run tests
               run: |
