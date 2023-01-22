@@ -1,0 +1,6 @@
+.idea
+.idea/*
+logfiles_generated
+logfiles_generated/*
+target
+/target/*
