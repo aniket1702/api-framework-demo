@@ -5,8 +5,6 @@ on:
         branches:
             - master
 
-env:
-    PATH_TO_DIRECTORY: src/test/resources
 jobs:
     build:
         runs-on: ubuntu-latest
@@ -30,7 +28,7 @@ jobs:
                   mvn clean compile
 
             - name: Changing directory to run db
-              run: cd $PATH_TO_DIRECTORY
+              run: cd src/test/resources
 
             - name: Running DB
               run: json-server db.json --port=8080
