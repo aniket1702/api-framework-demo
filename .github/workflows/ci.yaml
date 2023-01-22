@@ -5,11 +5,14 @@ on:
         branches:
             - master
 
+env:
+    PATH_TO_DIRECTORY: src/test/resources
 jobs:
     build:
         runs-on: ubuntu-latest
 
         steps:
+            - name: Pull the project into the machine
             - uses: actions/checkout@v2
 
             - name: Set up JDK
@@ -22,9 +25,13 @@ jobs:
                   sudo apt-get update
                   sudo apt-get install -y maven
 
+            - name: Changing directory to run db
+              run: cd $PATH_TO_DIRECTORY
+            - name: Running DB
+              run: json-server db.json --port=8080
             - name: Build the project
               run: |
-                  mvn clean install
+                  mvn clean compile
 
             - name: Run tests
               run: |
