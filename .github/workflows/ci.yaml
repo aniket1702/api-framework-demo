@@ -24,13 +24,13 @@ jobs:
 
             - name: Build the project
               run: |
-                  mvn clean install
+                  mvn clean compile
 
-#            - name: Changing directory to run db
-#              run: cd src/test/resources
-#
-#            - name: Running DB
-#              run: json-server db.json --port=8080
+            - name: Changing directory to run db
+              run: cd src/test/resources
+
+            - name: Running DB
+              run: json-server db.json --port=8080
 
             - name: Run tests
               run: |
