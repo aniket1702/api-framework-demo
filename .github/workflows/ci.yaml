@@ -28,9 +28,6 @@ jobs:
             - name: Run tests
               run: |
                   mvn test
-            - name: Check for X11
-              run: if [ -z "$DISPLAY" ]; then echo "X11 not found"; exit 0; fi
-              continue-on-error: true
 
     deploy:
         runs-on: ubuntu-latest
