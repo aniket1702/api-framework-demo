@@ -33,8 +33,20 @@ jobs:
                   mvn clean compile
             - name: Install Node.js
               run: sudo apt-get install -y nodejs
+            - name: Cache Node.js
+              uses: actions/cache@v2
+              with:
+                path: /usr/local/bin/node
+                key: node-${{ hashFiles('**/usr/local/bin/node/**') }}
+
             - name: Install json-server
               run: npm install -g json-server
+            - name: Cache json-server
+              uses: actions/cache@v2
+              with:
+                path: /usr/local/lib/node_modules/json-server
+                key: json-server-${{ hashFiles('**/usr/local/lib/node_modules/json-server/**') }}
+
             - name: Run json-server
               run: json-server db.json --port=8080 &
             - name: Run tests
