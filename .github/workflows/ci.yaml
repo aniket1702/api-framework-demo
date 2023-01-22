@@ -13,16 +13,20 @@ jobs:
               with:
                   java-version: 11
             - name: Cache JDK
-              env:
-                  JDK_CACHE: /usr/lib/jvm/java-11-openjdk-amd64
+              uses: actions/cache@v2
+              with:
+                path: /usr/lib/jvm/java-11-openjdk-amd64
+                key: java-11-openjdk-amd64-${{ hashFiles('**/java-11-openjdk-amd64/**') }}
 
             - name: Install Maven
               run: |
                   sudo apt-get update
                   sudo apt-get install -y maven
             - name: Cache Maven
-              env:
-                  MAVEN_CACHE: /usr/share/maven
+              uses: actions/cache@v2
+              with:
+                path: /usr/share/maven
+                key: maven-${{ hashFiles('**/usr/share/maven/**') }}
 
             - name: Build the project
               run: |
