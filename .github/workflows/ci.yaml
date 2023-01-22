@@ -25,7 +25,7 @@ jobs:
 
             - name: Build the project
               run: |
-                  mvn clean compile
+                  mvn clean install
 
 #            - name: Changing directory to run db
 #              run: cd src/test/resources
