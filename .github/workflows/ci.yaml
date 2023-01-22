@@ -25,13 +25,15 @@ jobs:
                   sudo apt-get update
                   sudo apt-get install -y maven
 
-            - name: Changing directory to run db
-              run: cd $PATH_TO_DIRECTORY
-            - name: Running DB
-              run: json-server db.json --port=8080
             - name: Build the project
               run: |
                   mvn clean compile
+
+            - name: Changing directory to run db
+              run: cd $PATH_TO_DIRECTORY
+
+            - name: Running DB
+              run: json-server db.json --port=8080
 
             - name: Run tests
               run: |
