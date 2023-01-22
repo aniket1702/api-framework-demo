@@ -90,6 +90,6 @@ public final class ExtentReport {
             extentReports.flush();
         }
         ExtentReportManager.unload();
-        Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());
+        //Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentReportFilePath()).toURI());
     }
 }
