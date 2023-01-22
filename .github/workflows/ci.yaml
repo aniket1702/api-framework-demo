@@ -23,8 +23,6 @@ jobs:
               run: sudo apt-get install -y nodejs
             - name: Install json-server
               run: npm install -g json-server
-            - name: Moving to resources folder
-              run: cd src/test/resources
             - name: Run json-server
               run: json-server db.json --port=8080 &
             - name: Run tests
